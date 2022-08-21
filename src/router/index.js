@@ -40,7 +40,7 @@ const router = createRouter({
     },
     ,
     {
-      path: '/article/:postId',
+      path: '/article/:postSlug',
       name: 'landing.post.detail',
       component: LandingPostDetail,
       meta: {

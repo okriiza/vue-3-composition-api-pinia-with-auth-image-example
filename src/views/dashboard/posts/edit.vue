@@ -194,7 +194,7 @@ const onUpdate = () => {
     })
 }
 onMounted(async () => {
-  const response = await axios.get(`/api/posts/${postId}`)
+  const response = await axios.get(`/api/post/${postId}`)
   post.title = response.data.post.title
   post.body = response.data.post.body
   post.published = response.data.post.published

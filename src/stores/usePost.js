@@ -22,7 +22,7 @@ export const usePostStore = defineStore('post', {
     },
 
     async storePost(posts) {
-      const response = (await axios.post('api/posts', posts)).data;
+      const response = (await axios.post('api/post', posts)).data;
       if (response.status) {
         this.meta = response.message;
       } else {
@@ -30,7 +30,7 @@ export const usePostStore = defineStore('post', {
       }
     },
     async updatePost(id, post) {
-      const response = (await axios.patch(`api/posts/${id}`, post)).data;
+      const response = (await axios.patch(`api/post/${id}`, post)).data;
       if (response.status) {
         this.meta = response.message;
       } else {
@@ -38,7 +38,7 @@ export const usePostStore = defineStore('post', {
       }
     },
     async deletePost(id) {
-      const response = (await axios.delete(`api/posts/${id}`)).data;
+      const response = (await axios.delete(`api/post/${id}`)).data;
       if (response.status) {
         this.meta = response.message;
       } else {

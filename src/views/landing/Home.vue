@@ -19,7 +19,7 @@
         <p class="text-sm" v-html="$filters.description(post.body, 120)"></p>
         <div class="card-actions justify-end">
           <RouterLink
-            :to="{ name: 'landing.post.detail', params: { postId: post.id } }"
+            :to="{ name: 'landing.post.detail', params: { postSlug: post.slug } }"
             class="btn btn-primary btn-sm"
             >Read More</RouterLink
           >
